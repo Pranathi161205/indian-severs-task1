@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Population Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Global Demographics</p>
+        <h1>World Population Map</h1>
+      </div>
+
+      <div class="search-panel">
+        <label for="countrySearch">Find Country</label>
+        <div class="search-row">
+          <input id="countrySearch" type="search" placeholder="Search country name">
+          <button id="clearSearchBtn" type="button">Clear</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="stats-grid" aria-label="Population summary">
+      <article class="stat-card">
+        <span>Countries Loaded</span>
+        <strong id="countryCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Mapped Population</span>
+        <strong id="worldPopulation">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Selected Country</span>
+        <strong id="selectedCountry">None</strong>
+      </article>
+    </section>
+
+    <section class="map-layout">
+      <div class="map-card">
+        <div id="map"></div>
+        <div class="legend" aria-label="Population legend">
+          <h2>Population</h2>
+          <div id="legendItems"></div>
+        </div>
+      </div>
+
+      <aside class="side-panel">
+        <section class="info-card">
+          <span class="label">Country Details</span>
+          <h2 id="detailName">Select a country</h2>
+          <p id="detailRegion">Hover or click on the map to inspect population.</p>
+          <div class="detail-number">
+            <span>Population</span>
+            <strong id="detailPopulation">-</strong>
+          </div>
+        </section>
+
+        <section class="info-card">
+          <span class="label">Largest Populations</span>
+          <ol id="topCountries" class="top-list"></ol>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

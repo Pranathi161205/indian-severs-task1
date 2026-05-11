@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Ladder</title>
+  <desc id="desc">A colorful ladder used on the snakes and ladders board.</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M29 84 44 12" stroke="#8b5a2b" stroke-width="8"/>
+    <path d="M61 84 76 12" stroke="#8b5a2b" stroke-width="8"/>
+    <path d="M39 25h31M36 39h31M33 53h31M30 67h31" stroke="#f2b84b" stroke-width="7"/>
+    <path d="M44 12 29 84M76 12 61 84" stroke="#5f3a18" stroke-width="2" opacity=".45"/>
+  </g>
+</svg>

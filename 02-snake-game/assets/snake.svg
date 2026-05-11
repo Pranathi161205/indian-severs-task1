@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Snake</title>
+  <desc id="desc">A curved green snake used on the snakes and ladders board.</desc>
+  <path d="M72 14c-18 0-22 13-13 24 7 8 5 17-8 20-15 3-31-4-35 10-3 10 7 17 21 16"
+        fill="none" stroke="#2f7d32" stroke-width="13" stroke-linecap="round"/>
+  <path d="M72 14c-18 0-22 13-13 24 7 8 5 17-8 20-15 3-31-4-35 10-3 10 7 17 21 16"
+        fill="none" stroke="#74b86f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M69 13c5-5 14-2 17 4-3 6-12 8-17 3z" fill="#2f7d32"/>
+  <circle cx="77" cy="16" r="2" fill="#101810"/>
+  <path d="M85 19h8" stroke="#d94c3d" stroke-width="3" stroke-linecap="round"/>
+  <path d="M93 19l-4-3M93 19l-4 3" stroke="#d94c3d" stroke-width="2" stroke-linecap="round"/>
+</svg>

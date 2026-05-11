@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Sort Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Sorting Lab</p>
+        <h1>Quick Sort Visualizer</h1>
+      </div>
+
+      <div class="run-actions" aria-label="Playback controls">
+        <button id="playBtn" type="button">Play</button>
+        <button id="pauseBtn" type="button" class="secondary">Pause</button>
+        <button id="stepBtn" type="button" class="secondary">Step</button>
+        <button id="resetBtn" type="button" class="secondary">Reset</button>
+      </div>
+    </header>
+
+    <section class="control-panel">
+      <label>
+        <span>Array Size</span>
+        <input id="sizeSlider" type="range" min="10" max="80" value="36">
+      </label>
+
+      <label>
+        <span>Speed</span>
+        <input id="speedSlider" type="range" min="1" max="100" value="55">
+      </label>
+
+      <label class="input-wide">
+        <span>Custom Values</span>
+        <input id="customInput" type="text" placeholder="Example: 42, 17, 88, 3, 56">
+      </label>
+
+      <button id="randomBtn" type="button">Randomize</button>
+      <button id="applyInputBtn" type="button" class="secondary">Use Values</button>
+    </section>
+
+    <section class="stage">
+      <div class="visualizer-card">
+        <div id="bars" class="bars" aria-label="Array bars"></div>
+      </div>
+
+      <aside class="info-panel">
+        <article class="stat-card">
+          <span>Status</span>
+          <strong id="statusText">Ready</strong>
+          <p id="detailText">Generate an array, then play or step through quick sort.</p>
+        </article>
+
+        <article class="stat-grid">
+          <div>
+            <span>Comparisons</span>
+            <strong id="comparisonCount">0</strong>
+          </div>
+          <div>
+            <span>Swaps</span>
+            <strong id="swapCount">0</strong>
+          </div>
+          <div>
+            <span>Pivot</span>
+            <strong id="pivotValue">-</strong>
+          </div>
+          <div>
+            <span>Range</span>
+            <strong id="rangeText">-</strong>
+          </div>
+        </article>
+
+        <article class="legend-card">
+          <h2>Legend</h2>
+          <div class="legend-list">
+            <span><i class="legend-swatch default"></i>Unsorted</span>
+            <span><i class="legend-swatch active"></i>Active range</span>
+            <span><i class="legend-swatch comparing"></i>Comparing</span>
+            <span><i class="legend-swatch pivot"></i>Pivot</span>
+            <span><i class="legend-swatch swap"></i>Swapping</span>
+            <span><i class="legend-swatch sorted"></i>Sorted</span>
+          </div>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

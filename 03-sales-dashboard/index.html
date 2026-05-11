@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="dashboard">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Revenue Intelligence</p>
+        <h1>Sales Dashboard</h1>
+      </div>
+
+      <div class="filters" aria-label="Dashboard filters">
+        <label>
+          <span>Region</span>
+          <select id="regionFilter">
+            <option value="all">All Regions</option>
+            <option value="north">North</option>
+            <option value="south">South</option>
+            <option value="east">East</option>
+            <option value="west">West</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Category</span>
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="fashion">Fashion</option>
+            <option value="home">Home</option>
+            <option value="grocery">Grocery</option>
+          </select>
+        </label>
+
+        <button id="resetBtn" type="button">Reset</button>
+      </div>
+    </header>
+
+    <section class="kpi-grid" aria-label="Sales summary">
+      <article class="kpi-card">
+        <span>Total Revenue</span>
+        <strong id="revenueKpi">$0</strong>
+        <small id="revenueTrend">Updated instantly</small>
+      </article>
+      <article class="kpi-card">
+        <span>Total Orders</span>
+        <strong id="ordersKpi">0</strong>
+        <small>Completed purchases</small>
+      </article>
+      <article class="kpi-card">
+        <span>Average Order</span>
+        <strong id="aovKpi">$0</strong>
+        <small>Revenue per order</small>
+      </article>
+      <article class="kpi-card">
+        <span>Conversion</span>
+        <strong id="conversionKpi">0%</strong>
+        <small>Visitor to buyer rate</small>
+      </article>
+    </section>
+
+    <section class="charts-grid">
+      <article class="chart-card chart-wide">
+        <div class="card-head">
+          <div>
+            <h2>Revenue Trend</h2>
+            <p>Monthly sales performance</p>
+          </div>
+          <div class="segmented" aria-label="Chart type">
+            <button id="lineViewBtn" class="active" type="button">Line</button>
+            <button id="barViewBtn" type="button">Bar</button>
+          </div>
+        </div>
+        <div class="chart-box">
+          <canvas id="revenueChart"></canvas>
+        </div>
+      </article>
+
+      <article class="chart-card">
+        <div class="card-head">
+          <div>
+            <h2>Category Mix</h2>
+            <p>Share of revenue</p>
+          </div>
+        </div>
+        <div class="chart-box">
+          <canvas id="categoryChart"></canvas>
+        </div>
+      </article>
+
+      <article class="chart-card">
+        <div class="card-head">
+          <div>
+            <h2>Region Sales</h2>
+            <p>Revenue by market</p>
+          </div>
+        </div>
+        <div class="chart-box">
+          <canvas id="regionChart"></canvas>
+        </div>
+      </article>
+
+      <article class="chart-card chart-wide">
+        <div class="card-head">
+          <div>
+            <h2>Top Products</h2>
+            <p>Best performing SKUs</p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Region</th>
+                <th>Revenue</th>
+                <th>Orders</th>
+              </tr>
+            </thead>
+            <tbody id="productTable"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

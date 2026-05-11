@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snakes and Ladders</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Classic Board Game</p>
+        <h1>Snakes & Ladders</h1>
+      </div>
+
+      <div class="hero-actions">
+        <button id="rollBtn" type="button">Roll Dice</button>
+        <button id="newGameBtn" type="button" class="secondary">New Game</button>
+      </div>
+    </section>
+
+    <section class="game-layout">
+      <div class="board-panel">
+        <div id="board" class="board" aria-label="Snakes and ladders board"></div>
+      </div>
+
+      <aside class="side-panel">
+        <div class="turn-card">
+          <span class="label">Current Turn</span>
+          <div id="currentPlayer" class="player-name">Player 1</div>
+          <p id="message">Roll the dice to start the game.</p>
+        </div>
+
+        <div class="dice-card">
+          <span class="label">Dice</span>
+          <div id="dice" class="dice">-</div>
+        </div>
+
+        <div class="score-card">
+          <div class="score-row player-one">
+            <span>Player 1</span>
+            <strong id="playerOneScore">1</strong>
+          </div>
+          <div class="score-row player-two">
+            <span>Player 2</span>
+            <strong id="playerTwoScore">1</strong>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
